@@ -6,8 +6,8 @@ import logging
 
 # configuração dos logs do pipeline
 logging.basicConfig(
-    filename='./logs/pipeline-logs/pipeline.log',  # Nome do arquivo de log
-    level=logging.INFO,       # Nível de logging
+    filename='path/to/logs/pipeline-logs/pipeline.log',  # Nome do arquivo de log
+    level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 
@@ -20,7 +20,7 @@ builder = SparkSession.builder \
     .config("spark.jars.packages", "io.delta:delta-core_2.12:2.3.0") \
     .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
     .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
-    .config("spark.eventLog.dir", "./logs/spark-events") \
+    .config("spark.eventLog.dir", "path/to/logs/spark-events") \
     .config("spark.eventLog.logBlockUpdates.enabled", "true") \
     .config("spark.eventLog.jsonFormat.enabled", "true")
 
@@ -32,8 +32,8 @@ try:
     # Leitura dos dados do Kafka
     df = spark.readStream \
         .format("kafka") \
-        .option("kafka.bootstrap.servers", "localhost:9092") \
-        .option("subscribe", "meu-topico") \
+        .option("kafka.bootstrap.servers", "host") \
+        .option("subscribe", "topic") \
         .option("startingOffsets", "earliest") \
         .load()
 
@@ -59,8 +59,8 @@ try:
     query_delta = df.writeStream \
         .format("delta") \
         .outputMode("append") \
-        .option("checkpointLocation", "./checkpoint") \
-        .start('./delta/table')\
+        .option("checkpointLocation", "path/to/checkpoint") \
+        .start('path/to/delta/table')\
         .awaitTermination()
     
 except Exception as e:
