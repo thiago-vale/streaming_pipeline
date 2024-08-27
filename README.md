@@ -5,7 +5,7 @@ Pipeline para ingestão de dados de Streaming
 link da imagem
 [https://drive.google.com/file/d/1n3BJTERtmIW42N8HlJwptYRgKgs7W885/view?usp=sharing](https://drive.google.com/file/d/1n3BJTERtmIW42N8HlJwptYRgKgs7W885/view?usp=sharing)
 
-![](/home/thiago/Documentos/GitHub/streaming_pipeline/Captura de tela de 2024-08-26 23-21-01.png)
+![](Captura de tela de 2024-08-26 23-21-01.png)
 
 ### Ferramentas
 
