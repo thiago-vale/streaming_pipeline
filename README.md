@@ -1,4 +1,4 @@
-# streaming_pipeline
+# Streaming Pipeline
 Pipeline para ingestão de dados de Streaming
 
 ### Descrição
