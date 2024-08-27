@@ -7,6 +7,10 @@ link da imagem
 
 ![](https://github.com/thiago-vale/streaming_pipeline/blob/master/Captura%20de%20tela%20de%202024-08-27%2000-06-00.png)
 
+A Ingestão e Feita atraves de um cluster Kafka on Azure HDInsight em json
+A mesma e Capturada pelo Spark Streaming configurado para ler as mensagens do Kafka e coletar os dados da mensagem
+
+
 ### Ferramentas
 
 - Azure HDInsight
