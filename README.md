@@ -43,14 +43,14 @@ Fazer a Ingestão e processamento de dados em tempo real de grandes volumes de d
     - Dados armanezados na Camada gold são catalogados e consumidos por Dashboards e Machine Learning permitindo insights em tempo real.
 
 
-6. **Motivadores para Escolha das Tecnologias**
+### **Motivadores para Escolha das Tecnologias**
 - Azure HDInsight: Utilizado pela sua escalabilidade e por ser uma solução gerenciada o que facilita a implantação e gerenciamento.
 - Kafka: Utilizado por ser um excelente motor para ingestão de dados em tempo real, excelente para soluções de dados em tempo real escalaveis.
 - Databricks com Spark Streaming: Escolhido por sua capacidade de processar grandes volumes de dados em tempo real, com alta performance e integração nativa com Delta Lake.
 - Azure Data Lake:  Solução escalável e segura para armazenamento de grandes volumes de dados.
 - Delta Lake: Suporte a transações ACID e versionamento de dados, essencial para garantir a confiabilidade e consistência dos dados ao longo do tempo.
  
-7. Exemplo de Codigo
+### Exemplo de Codigo
    
 '''
 
